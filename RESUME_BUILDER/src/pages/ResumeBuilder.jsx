@@ -148,7 +148,7 @@ const ResumeBuilder = () => {
       <div className="max-w-7xl mx-auto px-4 py-6">
         <Link
           to={"/app"}
-          className="inline-flex gap-2 items-center text-slate-500 hover:text-slate-700 transition-all"
+          className="inline-flex gap-2 items-center text-green-500 hover:text-green-700 transition-all"
         >
           <ArrowLeftIcon />
           Back to Dashboard
@@ -163,7 +163,7 @@ const ResumeBuilder = () => {
               {/*progress bar using activesectionindex */}
               <hr className="absolute top-0 left-0 right-0 border-2 border-gray-200" />
               <hr
-                className="absolute top-0 left-0 h-1 bg-gradient-to-r from-slate-500 to-slate-600 border-none transition-all duration-2000"
+                className="absolute top-0 left-0 h-1 bg-gradient-to-r from-green-500 to-green-600 border-none transition-all duration-2000"
                 style={{
                   width: `${
                     (activeSectionIndex * 100) / (sections.length - 1)
@@ -304,7 +304,7 @@ const ResumeBuilder = () => {
                 onClick={() => {
                   toast.promise(saveResume, { loading: "Saving..." });
                 }}
-                className="bg-gradient-to-br from-slate-100 to-slate-200 ring-slate-300 text-slate-600 ring hover:ring-slate-400 transition-all rounded-md px-6 py-2 mt-6 text-sm"
+                className="bg-gradient-to-br from-green-100 to-green-200 ring-green-300 text-green-600 ring hover:ring-green-400 transition-all rounded-md px-6 py-2 mt-6 text-sm"
               >
                 Save Changes
               </button>
@@ -339,7 +339,7 @@ const ResumeBuilder = () => {
 
                 <button
                   onClick={downloadResume}
-                  className="flex items-center py-2 px-6 gap-2 text-xs bg-gradient-to-br from-slate-100 to-slate-200 text-slate-600 ring-slate-300 rounded-lg  hover:ring transition-colors"
+                  className="flex items-center py-2 px-6 gap-2 text-xs bg-gradient-to-br from-green-100 to-green-200 text-green-600 ring-green-300 rounded-lg  hover:ring transition-colors"
                 >
                   <DownloadIcon className="size-4" /> Download
                 </button>
