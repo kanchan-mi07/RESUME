@@ -40,7 +40,9 @@ const ExperienceForm = ({ data, onChange }) => {
         {
           userContent: prompt,
         },
-        { headers: { Authorization: token } }
+        {
+          headers: { Authorization: `Bearer ${token}` }
+        }
       );
       updateExperience(index, "description", data.enhanceContent);
     } catch (error) {
