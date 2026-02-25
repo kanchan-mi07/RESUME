@@ -15,7 +15,8 @@ await connectDB()
 app.use(express.json())
 app.use(cors(
   {
-  origin: "https://resume-plum-tau-24.vercel.app",
+    origin: ["https://resume-plum-tau-24.vercel.app",
+            "http://localhost:5173"],
   credentials: true
 }
 ))
