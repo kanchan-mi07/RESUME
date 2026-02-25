@@ -179,7 +179,7 @@ const Hero = () => {
         {/* Mobile Menu */}
         <div
           className={`fixed inset-0 z-[100] bg-black/40 text-black backdrop-blur flex flex-col items-center justify-center text-lg gap-8 md:hidden transition-transform duration-300 ${
-            menuOpen ? "trangreen-x-0" : "-trangreen-x-full"
+            menuOpen ? "translate-x-0" : "-translate-x-full"
           }`}
         >
           <a href="#" className="text-white">
