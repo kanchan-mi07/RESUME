@@ -15,9 +15,18 @@ await connectDB()
 app.use(express.json())
 app.use(cors(
   {
-    origin: ["https://resume-plum-tau-24.vercel.app",
-          "https://resume-srhn.vercel.app", 
-            "http://localhost:5173"],
+    origin: function (origin, callback) {
+    if (!origin) return callback(null, true);
+
+    if (
+      origin.includes("vercel.app") ||
+      origin === "http://localhost:5173"
+    ) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
   credentials: true
 }
 ))
